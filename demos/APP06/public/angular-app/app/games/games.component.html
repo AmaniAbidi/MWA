@@ -1,0 +1,17 @@
+<li>
+    <ul *ngFor = "let game of games">
+        <a routerLink = "/games/{{game._id}}">
+            {{game.title}}<br/>
+        </a>
+
+    </ul>
+</li>
+<br/>
+Add New Game: <br/>
+<form action="">
+    <input type="text"  id="title" name = "title" required [(ngModel)] = "newGame.title"> <br/>
+    <input type="text"  id="price" name = "price" required [(ngModel)] = "newGame.price"> <br/>
+    <button (click) = "save()" type="submit">Add Game</button>
+</form>
+{{newGame.title}}
+
