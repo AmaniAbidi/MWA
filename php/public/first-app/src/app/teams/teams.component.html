@@ -1,0 +1,24 @@
+<li>
+    <ul *ngFor = "let team of teams">
+        <a routerLink = "/team/{{team._id}}">
+            {{team.name}}<br/>
+        </a>
+      
+    </ul>
+</li>
+<br/>
+
+<form #registerTeam="ngForm" (ngSubmit)="save()" style="color:black;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box">
+
+    name:<input class="form-control" name="name" id="name" placeholder="name" ngModel /><br />
+    coachName:<input class="form-control" name="coachName" type="text" id="coachName"
+        placeholder="coachName" ngModel /><br />
+
+    <button class="btn-success" type="submit" [disabled]="registerTeam.invalid">Add a team</button>
+</form>
