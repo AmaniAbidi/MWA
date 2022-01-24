@@ -1,0 +1,12 @@
+
+<H1>Information about the Team: <p>{{team.name}}</p>
+</H1>
+<p>
+
+    name: {{team.name }}<BR />
+    coachName: {{team.coachName}}<BR />
+      <a routerLink="/teams/update/{{team._id}}">Edit</a>--
+        <button (click)="delete()" style="color:red">delete</button>
+
+</p><a style="padding-left:10px" routerLink="/teams">Back To
+    List</a>
