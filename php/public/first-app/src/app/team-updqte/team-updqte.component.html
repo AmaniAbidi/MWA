@@ -1,0 +1,23 @@
+
+<H1>Information about the Team: <p>{{team?.name}}</p>
+</H1>
+<p>
+
+    name: {{team?.name }}<BR />
+    coachName: {{team?.coachName}}<BR />
+   
+</p>
+<form #updateTeam="ngForm" (ngSubmit)="update()" style="color:black;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box">
+
+    name:<input class="form-control" name="name" id="name" placeholder="name" ngModel /><br />
+    coachName:<input class="form-control" name="coachName" type="text" id="coachName"
+        placeholder="coachName" ngModel /><br />
+    <button class="btn-success" type="submit" [disabled]="updateTeam.invalid">Update</button>
+
+</form>
